@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Pinterest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">   
+    <script type=module src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container"><img src="/public/icons/pinterest_logo.png" alt="Pinterest Logo" id="logo">
+        </div>
+        <div class="header-container">
+            <nav class="explore-nav">
+                <ul class="explore-buttons-container"> 
+                    <li id="home"></li>
+                    <li id="explore"></li>
+                    <li id="create"></li>
+                </ul>
+            </nav>
+            <form class="search" id="search-form">
+                <button class="search-button" type="submit"><img src="/public/icons/search_icon.png" alt="Search button" id="search-icon"></button>
+                <input type="text" placeholder="Buscar" class="search-bar" id="search-input">
+            </form>
+            <ul class="personal">
+                <li id="notifications"></li>
+                <li id="messages"></li>
+                <li id="profile"></li>
+            </ul>
+        </div>
+    </header>
+    <div class="results" id="imgContainer"></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.main-button {
+  background-color: var(--light-bg);
+  height: 60px;
+  border-radius: 30px;
+  border: solid 1px var(--light-bg);
+  font-size: 24px;
+  font-weight: 400;
+  padding: 0 15px 0 15px;
+  transition-duration: 0.4s;
+}
+
+.main-button:hover {
+  background-color: var(--dark-bg);
+  color: var(--light-bg);
+  cursor: pointer;
+}
+
+.customer-button img {
+  width: 32px;
+  height: 32px;
+}
+
+.customer-button {
+  width: 47px;
+  height: 47px;
+  background-color: var(--light-bg);
+  border-radius: 100%;
+  border: solid 1px var(--light-bg);
+  margin: 0 4px 0 4px;
+  transition-duration: 0.4s;
+}
+
+.customer-button:hover {
+  background-color: var(--dark-bg);
+  cursor: pointer;
+}

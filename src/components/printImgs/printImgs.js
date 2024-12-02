@@ -5,6 +5,31 @@ import { createCard } from "../card/card";
 const accessKey = "x72r3FI3LJ6cPaAe2zj8cxJ2ScQWT4Rx7w70ENrvJ-4";
 
 
+export const DefaultPrint = async (def) => {
+  const query = def;
+  const imageContainer = document.getElementById('imgContainer');
+  imageContainer.innerHTML = ''; 
+
+  try {
+    const profilePicResponse  = await fetch(`https://api.unsplash.com/search/photos?query=face&client_id=${accessKey}`);
+    const profilePicData = await profilePicResponse.json();
+    //FETCH IMAGES FOR "MUSCLE CAR" AS AN ALTERNATIVE 
+    const defaultResponse = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=30&client_id=${accessKey}`);
+    const defaultData = await defaultResponse.json();
+
+    let profileIndex = 0;
+    defaultData.results.forEach((image) => {
+      const profilePic = profilePicData.results[profileIndex % profilePicData.results.length];
+      createCard(image, profilePic, imageContainer);
+      profileIndex++;
+    });
+
+  } catch (error) {
+    console.error("Error al obtener imágenes:", error);
+  }
+}
+
+
 //GET SEARCH KEY WORD FROM SEARCH BAR (FORM)
 export const printImgs = () => {
   document.getElementById('search-form').addEventListener('submit', async (event) => {

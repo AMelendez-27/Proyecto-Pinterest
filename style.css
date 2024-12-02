@@ -121,7 +121,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 0 15px 0 15px;
+    padding: 0 4% 0 4%;
   }
 
   .results p {

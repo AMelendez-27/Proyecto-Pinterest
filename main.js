@@ -1,6 +1,6 @@
 import "./style.css";
 import { createMainButton, createCustomerButton } from "./src/components/button/button";
-import { printFirstRequestedImgs, printImgs } from "./src/components/printImgs/printImgs";
+import { DefaultPrint, printFirstRequestedImgs, printImgs } from "./src/components/printImgs/printImgs";
 
 // HEADER 
 //EXPLORE BUTTONS (LEFT SIDE BUTTONS)
@@ -22,22 +22,13 @@ mesagesButton.innerHTML = `${createCustomerButton({iconRute : "messages", descri
 profileButton.innerHTML = `${createCustomerButton({iconRute : "profile", descriptionText : "Boton de acceso al perfil", idName : "profile-button"})}`;
 
 //BODY
+// DEFAULT PRINT EXAMPLE
+DefaultPrint('muscle car');
+
 //PRINT RECUESTED IMGS
 printImgs();
 
-//SAVE INPUTS
-const firstSearch = [];
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("search-form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    const inputValue = document.getElementById("search-input").value;
-    if (inputValue) {
-      firstSearch.push(inputValue);
-    }
-  });
-});
-
-//PRINT FIRST REQUESTED IMGS
+//PRINT DEFAULT BY CLICKING ON THE LOGO
 document.getElementById("logo").addEventListener("click", () => {
-  printFirstRequestedImgs(firstSearch[0]);
+  DefaultPrint('muscle car');
 });

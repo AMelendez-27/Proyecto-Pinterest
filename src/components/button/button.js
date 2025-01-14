@@ -5,5 +5,5 @@ export const createMainButton = ({text, idName = "exampleId"}) => {
 }
 
 export const createCustomerButton = ({iconRute, descriptionText, idName}) => {
-  return `<button class="customer-button" id="${idName}"><img src="/public/icons/${iconRute}.png" alt="${descriptionText}"></button>`
+  return `<button class="customer-button" id="${idName}"><img src="/icons/${iconRute}.png" alt="${descriptionText}"></button>`
 }
